@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Teranga | VTC & Livraison au Sénégal",
-  description: "Réservez un trajet ou devenez chauffeur avec Teranga, la mobilité locale au Sénégal.",
+  title: "DAKAR MOBILITY | Tous les transports de Dakar",
+  description: "Trouvez le meilleur trajet à Dakar en combinant transports publics et privés dans une seule application.",
 };
 
 export default function RootLayout({

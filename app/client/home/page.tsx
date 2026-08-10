@@ -228,7 +228,7 @@ export default function HomePage() {
           
           <Link href="/" className="flex items-center gap-2">
             <span className="text-2xl font-black tracking-widest text-yellow-400">
-              TERANGA <span className="text-red-600">VTC</span>
+              DAKAR MOBILITY
             </span>
           </Link>
 
@@ -279,7 +279,7 @@ export default function HomePage() {
             <span className="text-yellow-400">en toute sérénité</span>
           </h1>
           <p className="text-zinc-400 text-sm mb-6">
-            Commandez votre course VTC ou planifiez une livraison instantanée au meilleur prix.
+            Trouvez le meilleur trajet à Dakar en combinant transports publics et privés dans une seule application.
           </p>
 
           {/* Choix du service */}
