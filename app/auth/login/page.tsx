@@ -98,7 +98,7 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-gray-950 flex items-center justify-center p-4">
       <div className="w-full max-w-md bg-gray-900 rounded-2xl p-6 border border-gray-800">
-        <h1 className="text-2xl font-bold text-emerald-400 mb-6">🚌 DAKAR MOBILITY</h1>
+        <h1 className="text-2xl font-bold text-green-400 mb-6">🚗 TERANGA</h1>
         {error && <p className="text-red-400 text-sm mb-4">{error}</p>}
         {success && <p className="text-green-400 text-sm mb-4">{success}</p>}
 

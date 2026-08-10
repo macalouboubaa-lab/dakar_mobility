@@ -160,28 +160,10 @@ export default function RegisterPage() {
           >
             Chauffeur
           </button>
-          <button
-            type="button"
-            onClick={() => setRole("admin")}
-            className={`flex-1 rounded-xl px-3 py-2 ${role === "admin" ? "bg-green-500 text-black" : "bg-gray-800 text-white"}`}
-          >
-            Admin
-          </button>
-        </div>
-
         <button
           type="button"
-          onClick={handleRegister}
-          disabled={loading}
-          className="mt-4 w-full rounded-xl bg-green-500 px-3 py-3 font-semibold text-black disabled:opacity-50"
+          onClick={() => setRole("admin")}
+          className={`flex-1 rounded-xl px-3 py-2 ${role === "admin" ? "bg-green-500 text-black" : "bg-gray-800 text-white"}`}
         >
-          {loading ? "Création du compte..." : "Créer mon compte"}
+          Admin
         </button>
-
-        <p className="mt-4 text-center text-sm text-gray-500">
-          Déjà un compte ? <a href="/auth/login" className="text-green-400">Se connecter</a>
-        </p>
-      </div>
-    </div>
-  );
-}

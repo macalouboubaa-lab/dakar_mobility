@@ -1,30 +1,39 @@
-# 🚌 DAKAR MOBILITY
+# TERANGA
 
-Plateforme numérique de mobilité urbaine à Dakar (Sénégal).
-Agrège tous les transports : BRT, TER, Cars Rapides, Ndiaga Ndiaye,
-Dakar Dem Dikk, Taxis Collectifs, Clandos et plus.
+Application VTC et livraison pensée pour le Sénégal, avec une interface moderne et une intégration Supabase.
 
-## Stack Technique
-- **Frontend** : Next.js 16 (App Router) + Tailwind CSS + TypeScript
-- **Base de données** : Supabase (PostgreSQL + Auth + Realtime)
-- **Cartographie** : Mapbox GL
-- **Paiements** : Wave Sénégal + Orange Money
+## Prérequis
 
-## Fonctionnalités
-- Recherche d'itinéraire multi-modal
-- Comparaison de trajets (prix, durée, correspondances)
-- Paiement sécurisé mobile
-- Abonnements et forfaits
-- Profils conducteurs vérifiés
-- Interface mobile-first en français
+- Node.js 20+
+- npm
+- un projet Supabase avec les variables d’environnement suivantes :
+  - `NEXT_PUBLIC_SUPABASE_URL`
+  - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
 
-## Lancement
+## Installation
+
 ```bash
 npm install
+cp .env.example .env.local
+```
+
+Puis renseigner les variables dans [.env.local](.env.local).
+
+## Développement
+
+```bash
 npm run dev
 ```
 
-## Variables d'environnement
+## Déploiement Vercel
 
-Copier `.env.local.example` en `.env.local` et remplir les clés.
+1. Connecter le dépôt GitHub à Vercel.
+2. Ajouter les variables d’environnement dans les settings Vercel.
+3. Déployer la branche principale.
 
+## Variables attendues
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+```
