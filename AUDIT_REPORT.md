@@ -1,4 +1,29 @@
-# Audit du projet TERANGA
+# RAPPORT D'AUDIT DAKAR MOBILITY
+
+## 📊 État avant correction
+- Branding TERANGA présent dans le rapport initial, mais retiré des sources fonctionnelles.
+- La navbar importait un composant introuvable.
+- Le formulaire d'inscription contenait une erreur de syntaxe JSX.
+- La logique de pricing ne couvrait pas encore le modèle multi-modal attendu.
+- Le README et le rapport d'audit n'étaient pas alignés avec la cible DAKAR MOBILITY.
+
+## 🔧 Modifications apportées
+- Renommage de l'interface et des textes vers DAKAR MOBILITY.
+- Correction de l'import de la navbar dans [app/layout.tsx](app/layout.tsx).
+- Réparation du formulaire d'inscription dans [app/auth/register/page.tsx](app/auth/register/page.tsx).
+- Mise à jour du système de tarification dans [lib/pricing.ts](lib/pricing.ts).
+- Enrichissement des itinéraires mock dans [lib/transportUtils.ts](lib/transportUtils.ts).
+- Mise à jour du README et génération de ce rapport.
+
+## ✅ État après correction
+- Le branding principal est désormais aligné sur DAKAR MOBILITY.
+- Les pages essentielles existent et sont reliées correctement.
+- Le build a été vérifié après correction.
+
+## 🚀 Prochaines étapes recommandées
+1. Exécuter `npm run dev` pour tester l'interface.
+2. Exécuter le schéma SQL dans Supabase.
+3. Déployer sur Vercel avec les variables d'environnement configurées.
 
 ## 📊 État général
 - Statut du projet : Prototype fonctionnel de base, avec des pages d’authentification et des écrans de démonstration.

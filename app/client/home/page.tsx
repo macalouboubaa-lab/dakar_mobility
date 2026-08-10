@@ -228,7 +228,7 @@ export default function HomePage() {
           
           <Link href="/" className="flex items-center gap-2">
             <span className="text-2xl font-black tracking-widest text-yellow-400">
-              TERANGA <span className="text-red-600">VTC</span>
+              🚌 DAKAR MOBILITY
             </span>
           </Link>
 

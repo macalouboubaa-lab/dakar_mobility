@@ -1,4 +1,4 @@
-# Configuration Supabase pour Teranga
+# Configuration Supabase pour DAKAR MOBILITY
 
 Étapes pour vérifier et appliquer le schéma Supabase, et configurer les variables d'environnement.
 

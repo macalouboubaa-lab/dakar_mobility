@@ -1,11 +1,11 @@
 # Agent: KAGEBOT
 # AGENTS.md - Instructions pour les agents IA
 
-Ce fichier contient les instructions pour les agents IA qui travaillent sur le projet **TERANGA**.
+Ce fichier contient les instructions pour les agents IA qui travaillent sur le projet **DAKAR MOBILITY**.
 
 ## 📋 Vue d'ensemble du projet
 
-**TERANGA** est une application de VTC et de livraison pour le Sénégal, construite avec :
+**DAKAR MOBILITY** est une application de mobilité urbaine pour Dakar, construite avec :
 - **Framework** : Next.js 16.2.4 (App Router)
 - **Langage** : TypeScript
 - **Styling** : Tailwind CSS

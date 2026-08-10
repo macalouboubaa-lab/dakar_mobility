@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Navbar from "@/app/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Teranga | VTC & Livraison au Sénégal",
-  description: "Réservez un trajet ou devenez chauffeur avec Teranga, la mobilité locale au Sénégal.",
+  title: "DAKAR MOBILITY - Tous les transports de Dakar",
+  description: "Tous les transports de Dakar, dans une seule application",
 };
 
 export default function RootLayout({
@@ -24,13 +24,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="fr"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full bg-gray-950 text-white">
+    <html lang="fr" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col">
         <Navbar />
-        {children}
+        <main className="flex-1 pt-16">
+          {children}
+        </main>
       </body>
     </html>
   );

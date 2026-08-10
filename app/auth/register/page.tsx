@@ -81,8 +81,6 @@ export default function RegisterPage() {
         }
       }
 
-      // Commentaire : on ne bloque plus l’accès direct après inscription.
-      // Si la session n’est pas immédiatement disponible après signUp, on tente une connexion instantanée.
       if (!data.session) {
         const { error: loginError } = await supabase.auth.signInWithPassword({
           email: trimmedEmail,
@@ -109,14 +107,15 @@ export default function RegisterPage() {
 
   return (
     <div className="min-h-screen bg-gray-950 flex items-center justify-center p-4">
-      <div className="w-full max-w-md bg-gray-900 rounded-2xl p-6 border border-gray-800">
-        <h1 className="text-2xl font-bold text-green-400 mb-6">Créer un compte</h1>
-        {error && <p className="text-red-400 text-sm mb-4">{error}</p>}
+      <div className="w-full max-w-md rounded-2xl border border-gray-800 bg-gray-900 p-6">
+        <h1 className="mb-2 text-2xl font-bold text-green-400">🚌 DAKAR MOBILITY</h1>
+        <p className="mb-6 text-sm text-gray-400">Créer un compte pour réserver vos trajets et gérer vos transports.</p>
+        {error && <p className="mb-4 text-sm text-red-400">{error}</p>}
 
         <input
           type="text"
           placeholder="Nom complet"
-          className="w-full bg-gray-800 rounded-xl p-3 text-white mb-3"
+          className="mb-3 w-full rounded-xl border border-gray-700 bg-gray-800 p-3 text-white outline-none focus:border-green-500"
           value={fullName}
           onChange={(e) => setFullName(e.target.value)}
         />
@@ -124,7 +123,7 @@ export default function RegisterPage() {
         <input
           type="email"
           placeholder="Email"
-          className="w-full bg-gray-800 rounded-xl p-3 text-white mb-3"
+          className="mb-3 w-full rounded-xl border border-gray-700 bg-gray-800 p-3 text-white outline-none focus:border-green-500"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -132,7 +131,7 @@ export default function RegisterPage() {
         <input
           type="tel"
           placeholder="Téléphone"
-          className="w-full bg-gray-800 rounded-xl p-3 text-white mb-3"
+          className="mb-3 w-full rounded-xl border border-gray-700 bg-gray-800 p-3 text-white outline-none focus:border-green-500"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
         />
@@ -140,12 +139,12 @@ export default function RegisterPage() {
         <input
           type="password"
           placeholder="Mot de passe"
-          className="w-full bg-gray-800 rounded-xl p-3 text-white mb-3"
+          className="mb-3 w-full rounded-xl border border-gray-700 bg-gray-800 p-3 text-white outline-none focus:border-green-500"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <div className="flex gap-2 mb-4">
+        <div className="mb-4 flex gap-2">
           <button
             type="button"
             onClick={() => setRole("client")}
@@ -160,10 +159,31 @@ export default function RegisterPage() {
           >
             Chauffeur
           </button>
+          <button
+            type="button"
+            onClick={() => setRole("admin")}
+            className={`flex-1 rounded-xl px-3 py-2 ${role === "admin" ? "bg-green-500 text-black" : "bg-gray-800 text-white"}`}
+          >
+            Admin
+          </button>
+        </div>
+
         <button
           type="button"
-          onClick={() => setRole("admin")}
-          className={`flex-1 rounded-xl px-3 py-2 ${role === "admin" ? "bg-green-500 text-black" : "bg-gray-800 text-white"}`}
+          onClick={handleRegister}
+          disabled={loading}
+          className="w-full rounded-xl bg-green-500 px-3 py-3 font-semibold text-black transition hover:bg-green-400 disabled:opacity-50"
         >
-          Admin
+          {loading ? "Création du compte..." : "Créer mon compte"}
         </button>
+
+        <p className="mt-4 text-center text-sm text-gray-500">
+          Déjà un compte ?{" "}
+          <a href="/auth/login" className="text-green-400">
+            Se connecter
+          </a>
+        </p>
+      </div>
+    </div>
+  );
+}

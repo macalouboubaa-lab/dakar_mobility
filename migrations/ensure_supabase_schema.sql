@@ -1,4 +1,4 @@
--- Migration: Ensure required tables, RLS and policies for Teranga
+-- Migration: Ensure required tables, RLS and policies for DAKAR MOBILITY
 -- Instructions:
 -- 1) Ouvrez votre projet Supabase > SQL Editor
 -- 2) Collez le contenu de ce fichier et exécutez-le

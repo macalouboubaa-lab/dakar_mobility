@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" role="img">
+  <defs>
+    <linearGradient id="gd" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#22c55e" />
+    </linearGradient>
+  </defs>
+  <rect width="240" height="80" rx="18" fill="#081012" />
+  <path d="M24 60 L24 20 L68 60 L68 20 L96 60" fill="none" stroke="url(#gd)" stroke-width="14" stroke-linecap="round" />
+  <path d="M106 26 L136 26 L136 54 L170 54" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" />
+  <circle cx="154" cy="35" r="7" fill="#22c55e" />
+  <path d="M52 52 L66 38 L84 56" stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round" />
+  <text x="18" y="76" fill="#d1fae5" font-family="Inter, sans-serif" font-size="16" font-weight="700">NIU DEIM</text>
+</svg>
