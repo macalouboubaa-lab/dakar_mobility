@@ -1,11 +1,11 @@
 # Agent: KAGEBOT
 # AGENTS.md - Instructions pour les agents IA
 
-Ce fichier contient les instructions pour les agents IA qui travaillent sur le projet **DAKAR MOBILITY**.
+Ce fichier contient les instructions essentielles pour les agents IA qui travaillent sur le projet **DAKAR MOBILITY**.
 
 ## 📋 Vue d'ensemble du projet
 
-**DAKAR MOBILITY** est une application de mobilité urbaine pour Dakar, construite avec :
+**DAKAR MOBILITY** est une application de mobilité urbaine pour Dakar et ses régions.
 - **Framework** : Next.js 16.2.4 (App Router)
 - **Langage** : TypeScript
 - **Styling** : Tailwind CSS
@@ -14,93 +14,75 @@ Ce fichier contient les instructions pour les agents IA qui travaillent sur le p
 - **Cartographie** : Mapbox GL
 - **Déploiement** : Vercel
 
----
+## 🔑 Principales conventions
 
-## 🗂️ Structure du projet (à jour)
+- Code frontend uniquement : pas de backend Node API dans ce dépôt.
+- `app/` contient les pages et routes App Router.
+- `components/` contient des composants UI réutilisables.
+- `lib/` contient la logique partagée, surtout `lib/supabaseClient.ts`.
+- Utiliser `export default function` et `PascalCase` pour les composants.
+- Éviter `any`; préférer des types explicites.
+- Utiliser `use client` uniquement pour les composants interactifs.
+- Préférer Tailwind pour le style; respecter le design system vert (`green-600`, `green-700`).
 
-Voici l'organisation des dossiers pour que vous sachiez où trouver et où ajouter du code :
- 
-app/
-├── (auth)/ # Dossier pour l'authentification
-│ ├── login/
-│ │ └── page.tsx # Page de connexion
-│ └── register/
-│ └── page.tsx # Page d'inscription
-├── client/
-│ └── home/
-│ └── page.tsx # Page d'accueil client (avec la carte)
-├── components/ # Composants réutilisables
-│ ├── Navbar.tsx # Menu de navigation fixe
-│ └── MapWithRoute.tsx# Carte interactive Mapbox
-├── driver/
-│ └── home/
-│ └── page.tsx # Page d'accueil chauffeur
-├── lib/
-│ └── supabaseClient.ts # Client Supabase
-├── layout.tsx # Layout principal (intègre le Navbar)
-├── page.tsx # Page d'accueil (redirige vers login)
-└── globals.css # Styles globaux Tailwind
- 
+## 🗂️ Fichiers et routes clés
 
----
+- `app/layout.tsx` : layout racine et navbar globale.
+- `app/page.tsx` : page d’accueil.
+- `app/auth/login/page.tsx` et `app/auth/register/page.tsx` : flux d’authentification.
+- `app/client/home/page.tsx` : espace client.
+- `app/driver/home/page.tsx` : espace chauffeur.
+- `app/admin/home/page.tsx` : espace admin.
+- `app/components/AuthGate.tsx` : gestion de session et redirections.
+- `lib/supabaseClient.ts` : client Supabase singleton et helpers.
+- `migrations/ensure_supabase_schema.sql` / `supabase/schema.sql` : schéma de base.
 
-## 🎯 **Conventions de code**
+## 🌐 Environnement et configuration
 
-### 1. Composants
-- Utiliser **"use client"** pour les composants interactifs (ceux qui utilisent des hooks ou du state).
-- Exporter par défaut (`export default function`).
-- Nommer les fichiers en `PascalCase` (ex: `MapWithRoute.tsx`).
-
-### 2. Styles
-- Utiliser **Tailwind CSS** pour le styling.
-- Classes de base : `flex`, `gap`, `p-`, `bg-`, `text-`.
-- Design system : vert (`green-600`, `green-700`) comme couleur principale.
-
-### 3. Authentification
-- Utiliser **Supabase Auth** pour l'authentification.
-- Vérifier la session avec `supabase.auth.getSession()`.
-- Rediriger vers `/client/home` si connecté, `/auth/login` sinon.
-
-### 4. Base de données
-- Utiliser **Supabase** avec le client `@/lib/supabaseClient`.
-- Requêtes typées avec TypeScript.
-
-### 5. Variables d'environnement
-- **Ne JAMAIS commiter** `.env.local`.
-- Utiliser `process.env.NEXT_PUBLIC_*` pour les variables exposées.
-- Variables requises :
+- Ne jamais commiter `.env.local`.
+- Variables attendues :
   - `NEXT_PUBLIC_SUPABASE_URL`
   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
   - `NEXT_PUBLIC_MAPBOX_TOKEN`
+  - Optionnel : `NEXT_PUBLIC_APP_NAME`, `NEXT_PUBLIC_APP_SLOGAN`
+- Le projet utilise Supabase côté client via `lib/supabaseClient.ts`.
+- Pour la configuration Supabase, consultez `docs/SUPABASE_SETUP.md`.
 
----
+## ✅ Bonnes pratiques pour les agents
 
-## 🚨 **Règles importantes**
+- Lisez d’abord `README.md` et `docs/SUPABASE_SETUP.md` avant de modifier la configuration.
+- Modifiez la logique Supabase principalement dans `lib/supabaseClient.ts`.
+- Pour les composants visuels, utilisez `app/components/` et `components/` selon l’usage.
+- Respectez les routes : `/client/*`, `/driver/*`, `/admin/*`, `/auth/*`, `/booking/[id]`.
+- Ne pas ajouter de backend API route ; ce dépôt est orienté frontend + Supabase.
+
+## 🚨 Règles importantes
 
 ### ❌ À NE PAS FAIRE
-1. **Ne pas commiter** de secrets (tokens, clés API) dans le code.
-2. **Ne pas modifier** directement la branche `main` sans PR (utiliser des branches `feature/`).
-3. **Ne pas utiliser** `any` dans TypeScript (utiliser des types précis).
-4. **Ne pas ignorer** les erreurs de linting.
+1. Ne pas commiter de secrets ou de clés API.
+2. Ne pas modifier directement `main` sans PR.
+3. Ne pas utiliser `any` quand un type précis est possible.
+4. Ne pas ignorer les erreurs de linting ou les warnings Next.js.
 
 ### ✅ À FAIRE
-1. **Tester** localement avant de pousser (`npm run build`).
-2. **Documenter** les nouvelles fonctionnalités.
-3. **Utiliser** des composants réutilisables.
-4. **Suivre** le design system existant.
+1. Tester localement : `npm run dev`, `npm run build`, `npm run lint`.
+2. Documenter les changements importants.
+3. Centraliser l’accès Supabase via `lib/supabaseClient.ts`.
+4. Respecter la structure de routes existante.
 
----
-
-## 🔧 **Commandes utiles**
+## 🔧 Commandes utiles
 
 ```bash
-# Développement
-npm run dev          # Démarrer le serveur de développement
-npm run build        # Build pour production
-npm run lint         # Vérifier le code
-npm run start        # Démarrer en production
+npm install
+npm run dev
+npm run build
+npm run lint
+npm run start
+npm run verify:supabase
+```
 
-# Git
-git add .            # Ajouter les fichiers
-git commit -m "msg"  # Commiter
-git push origin main # Pousser sur main
+## 📚 Documentation liée
+
+- `README.md` pour l’installation et le déploiement.
+- `docs/SUPABASE_SETUP.md` pour la configuration Supabase.
+- `migrations/ensure_supabase_schema.sql` et `supabase/schema.sql` pour le schéma de base.
