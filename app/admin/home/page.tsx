@@ -1,14 +1,11 @@
 "use client";
 
-import AuthGate from "@/app/components/AuthGate";
-
 export default function AdminHomePage() {
   return (
-    <AuthGate expectedRole="admin">
       <main className="min-h-screen bg-gray-950 p-6 text-white">
         <div className="mx-auto max-w-6xl rounded-2xl border border-gray-800 bg-gray-900 p-6 shadow-2xl shadow-black/30">
           <div className="mb-6">
-            <h1 className="text-3xl font-bold text-green-400">Administration DAKAR MOBILITY</h1>
+            <h1 className="text-3xl font-bold text-green-400">Administration NIU DEIM</h1>
             <p className="mt-2 text-gray-400">Tableau de bord administrateur pour gérer les utilisateurs et les courses.</p>
           </div>
           <div className="grid gap-4 lg:grid-cols-3">
@@ -27,6 +24,5 @@ export default function AdminHomePage() {
           </div>
         </div>
       </main>
-    </AuthGate>
   );
 }

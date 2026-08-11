@@ -25,7 +25,7 @@ export default function Home() {
             Nouvelle mobilité locale
           </p>
           <h1 className="text-4xl font-bold leading-tight sm:text-5xl">
-            DAKAR MOBILITY relie tous les transports de Dakar dans une seule app.
+            NIU DEIM relie tous les transports de Dakar dans une seule app.
           </h1>
           <p className="mt-5 text-lg text-gray-300">
             Comparez les itinéraires, réservez rapidement et voyagez avec les meilleurs modes de transport disponibles dans la capitale.
@@ -48,7 +48,7 @@ export default function Home() {
         </div>
 
         <div className="w-full max-w-md rounded-2xl border border-gray-800 bg-gray-900/80 p-6 shadow-2xl shadow-black/30">
-          <h2 className="text-xl font-semibold text-green-400">Pourquoi DAKAR MOBILITY ?</h2>
+          <h2 className="text-xl font-semibold text-green-400">Pourquoi NIU DEIM ?</h2>
           <ul className="mt-4 space-y-3 text-sm text-gray-300">
             {highlights.map((item) => (
               <li key={item} className="flex items-start gap-2">

@@ -4,7 +4,7 @@ const testimonials = [
   {
     name: "Aïssatou D.",
     city: "Dakar",
-    comment: "Service impeccable, chauffeur ponctuel et voiture très propre. Je recommande Dakar Mobility pour tous mes transferts.",
+    comment: "Service impeccable, chauffeur ponctuel et voiture très propre. Je recommande NIU DEIM pour tous mes transferts.",
   },
   {
     name: "Mamadou S.",

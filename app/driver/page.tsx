@@ -7,7 +7,7 @@ export default function DriverLandingPage() {
         <div className="rounded-[32px] border border-white/10 bg-slate-900/80 p-10 shadow-2xl shadow-black/30 backdrop-blur-xl">
           <p className="text-sm uppercase tracking-[0.32em] text-amber-300">Espace Chauffeur</p>
           <h1 className="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Rejoignez la flotte Dakar Mobility
+            Rejoignez la flotte NIU DEIM
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300">
             Gagnez avec des missions régulières, un support dédié et un réseau de clients premium à Dakar et ses alentours.

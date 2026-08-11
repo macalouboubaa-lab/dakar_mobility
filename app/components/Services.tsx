@@ -30,7 +30,7 @@ export default function Services() {
         <p className="text-sm uppercase tracking-[0.28em] text-amber-300">Services dédiés</p>
         <h2 className="text-3xl font-semibold text-white sm:text-4xl">Des services sur mesure pour chaque besoin</h2>
         <p className="mx-auto max-w-2xl text-base leading-7 text-slate-300">
-          Que vous voyagiez seul, en groupe, pour affaires ou en famille, Dakar Mobility adapte votre trajet à vos exigences.
+          Que vous voyagiez seul, en groupe, pour affaires ou en famille, NIU DEIM adapte votre trajet à vos exigences.
         </p>
       </div>
 

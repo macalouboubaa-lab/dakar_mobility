@@ -20,7 +20,7 @@ export default function Footer() {
                 <ShieldCheck className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-2xl font-semibold">Dakar Mobility</p>
+                <p className="text-2xl font-semibold">NIU DEIM</p>
                 <p className="text-sm text-slate-400">VTC & Livraison premium au Sénégal</p>
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
 
         <p className="border-t border-white/10 pt-6 text-center text-sm text-slate-500">
-          © {new Date().getFullYear()} Dakar Mobility. Tous droits réservés.
+          © {new Date().getFullYear()} NIU DEIM. Tous droits réservés.
         </p>
       </div>
     </footer>

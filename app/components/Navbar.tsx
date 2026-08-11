@@ -13,7 +13,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3 text-lg font-semibold tracking-wide text-green-400">
           <Image src="/niu-deim-logo.svg" alt="Niu Deim logo" width={36} height={36} />
-          <span>DAKAR MOBILITY</span>
+          <span>NIU DEIM</span>
         </Link>
 
         <nav className="flex items-center gap-3 text-sm text-gray-300">

@@ -30,7 +30,7 @@ export default function Engagements() {
         <p className="text-sm uppercase tracking-[0.28em] text-amber-300">Pourquoi nous choisir</p>
         <h2 className="text-3xl font-semibold text-white sm:text-4xl">Nos engagements pour un VTC d’exception</h2>
         <p className="mx-auto max-w-2xl text-base leading-7 text-slate-300">
-          Dakar Mobility allie confort, sécurité et simplicité pour tous vos trajets urbains, professionnels et touristiques au Sénégal.
+          NIU DEIM allie confort, sécurité et simplicité pour tous vos trajets urbains, professionnels et touristiques au Sénégal.
         </p>
       </div>
 

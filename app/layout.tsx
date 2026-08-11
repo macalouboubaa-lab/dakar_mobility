@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DAKAR MOBILITY - Tous les transports de Dakar",
+  title: "NIU DEIM - Tous les transports de Dakar",
   description: "Tous les transports de Dakar, dans une seule application",
 };
 

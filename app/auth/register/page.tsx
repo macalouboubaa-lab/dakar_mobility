@@ -108,7 +108,7 @@ export default function RegisterPage() {
   return (
     <div className="min-h-screen bg-gray-950 flex items-center justify-center p-4">
       <div className="w-full max-w-md rounded-2xl border border-gray-800 bg-gray-900 p-6">
-        <h1 className="mb-2 text-2xl font-bold text-green-400">🚌 DAKAR MOBILITY</h1>
+        <h1 className="mb-2 text-2xl font-bold text-green-400">🚌 NIU DEIM</h1>
         <p className="mb-6 text-sm text-gray-400">Créer un compte pour réserver vos trajets et gérer vos transports.</p>
         {error && <p className="mb-4 text-sm text-red-400">{error}</p>}
 

@@ -14,7 +14,7 @@ export default function HeroSection() {
               VTC & Livraison Dakar
             </div>
             <div className="space-y-4">
-              <p className="text-sm uppercase tracking-[0.28em] text-amber-300/90">Dakar Mobility</p>
+              <p className="text-sm uppercase tracking-[0.28em] text-amber-300/90">NIU DEIM</p>
               <h1 className="max-w-3xl text-4xl font-black tracking-tight text-transparent sm:text-5xl lg:text-6xl bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400">
                 Le VTC qui pense comme une app, qui roule comme un service privé.
               </h1>
