@@ -1,11 +1,11 @@
 # Agent: KAGEBOT
 # AGENTS.md - Instructions pour les agents IA
 
-Ce fichier contient les instructions essentielles pour les agents IA qui travaillent sur le projet **DAKAR MOBILITY**.
+Ce fichier contient les instructions essentielles pour les agents IA qui travaillent sur le projet **NIU DEIM**.
 
 ## 📋 Vue d'ensemble du projet
 
-**DAKAR MOBILITY** est une application de mobilité urbaine pour Dakar et ses régions.
+**NIU DEIM** est une application de mobilité urbaine pour Dakar et ses régions.
 - **Framework** : Next.js 16.2.4 (App Router)
 - **Langage** : TypeScript
 - **Styling** : Tailwind CSS

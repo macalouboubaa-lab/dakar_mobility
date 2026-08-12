@@ -1,14 +1,14 @@
-# RAPPORT D'AUDIT DAKAR MOBILITY
+# RAPPORT D'AUDIT NIU DEIM
 
 ## 📊 État avant correction
 - Branding TERANGA présent dans le rapport initial, mais retiré des sources fonctionnelles.
 - La navbar importait un composant introuvable.
 - Le formulaire d'inscription contenait une erreur de syntaxe JSX.
 - La logique de pricing ne couvrait pas encore le modèle multi-modal attendu.
-- Le README et le rapport d'audit n'étaient pas alignés avec la cible DAKAR MOBILITY.
+- Le README et le rapport d'audit n'étaient pas alignés avec la cible NIU DEIM.
 
 ## 🔧 Modifications apportées
-- Renommage de l'interface et des textes vers DAKAR MOBILITY.
+- Renommage de l'interface et des textes vers NIU DEIM.
 - Correction de l'import de la navbar dans [app/layout.tsx](app/layout.tsx).
 - Réparation du formulaire d'inscription dans [app/auth/register/page.tsx](app/auth/register/page.tsx).
 - Mise à jour du système de tarification dans [lib/pricing.ts](lib/pricing.ts).
@@ -16,7 +16,7 @@
 - Mise à jour du README et génération de ce rapport.
 
 ## ✅ État après correction
-- Le branding principal est désormais aligné sur DAKAR MOBILITY.
+- Le branding principal est désormais aligné sur NIU DEIM.
 - Les pages essentielles existent et sont reliées correctement.
 - Le build a été vérifié après correction.
 

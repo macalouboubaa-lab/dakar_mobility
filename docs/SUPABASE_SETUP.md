@@ -1,4 +1,4 @@
-# Configuration Supabase pour DAKAR MOBILITY
+# Configuration Supabase pour NIU DEIM
 
 Étapes pour vérifier et appliquer le schéma Supabase, et configurer les variables d'environnement.
 

@@ -1,6 +1,6 @@
 -- ═══════════════════════════════════════
--- DAKAR MOBILITY — Schéma Base de Données
--- ═══════════════════════════════════════
+-- NIU DEIM — Schéma Base de Données
+-- ═════════════════════════════════════════
 
 CREATE TABLE IF NOT EXISTS users (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),

@@ -1,6 +1,6 @@
-# DAKAR MOBILITY
+# NIU DEIM
 
-DAKAR MOBILITY est une application moderne de mobilité urbaine pour Dakar et ses régions, intégrant recherche d’itinéraires, comparaison de transports, réservation et suivi de trajets.
+NIU DEIM est une application moderne de mobilité urbaine pour Dakar et ses régions, intégrant recherche d'itinéraires, comparaison de transports, réservation et suivi de trajets.
 
 ## Fonctionnalités clés
 
@@ -28,7 +28,7 @@ Renseigner les variables suivantes dans [.env.local](.env.local) :
 NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 NEXT_PUBLIC_MAPBOX_TOKEN=your-mapbox-token
-NEXT_PUBLIC_APP_NAME=DAKAR MOBILITY
+NEXT_PUBLIC_APP_NAME=NIU DEIM
 NEXT_PUBLIC_APP_SLOGAN=Tous les transports de Dakar, dans une seule app
 ```
 
